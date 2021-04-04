@@ -1,12 +1,12 @@
 import React from 'react';
 import { Avatar } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
-import s from '../UserMenu.module.css';
+import s from '../UserMenu/UserMenu.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { getUserName } from '../../redux/authorization/authorization-selectors';
 import { logOut } from '../../redux/authorization/authorization-operations';
 
-export default function LetterAvatars() {
+export default function UserMenu() {
   const dispatch = useDispatch();
   const userName = useSelector(getUserName);
   const nameInAvatar = userName[0].toUpperCase();
