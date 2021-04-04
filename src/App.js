@@ -5,6 +5,7 @@ import PublicRoute from './components/Routes/PublicRoute';
 import PrivateRoute from './components/Routes/PrivateRoute';
 import { getIsFetchingCurrentUser } from './redux/authorization/authorization-selectors';
 import { fetchCurrentUser } from './redux/authorization/authorization-operations';
+import Navigation from './components/Navigation/Navigation';
 import './App.css';
 
 function App() {
@@ -47,7 +48,9 @@ function App() {
               <PublicRoute path="/contacts">
                 {/* <ContactsPage /> */}
               </PublicRoute>
-
+              <Route>
+                <Navigation />
+              </Route>
               <Route>
                 <Redirect to="/auth" />
               </Route>
