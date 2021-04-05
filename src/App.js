@@ -6,8 +6,8 @@ import PrivateRoute from './components/Routes/PrivateRoute';
 import { getIsFetchingCurrentUser } from './redux/authorization/authorization-selectors';
 import { fetchCurrentUser } from './redux/authorization/authorization-operations';
 import Navigation from './components/Navigation/Navigation';
+import Footer from './components/Footer';
 import './App.css';
-
 function App() {
   const isFetchingCurrentUser = useSelector(getIsFetchingCurrentUser);
   const dispatch = useDispatch();
@@ -58,6 +58,7 @@ function App() {
           </Switch>
         </>
       )}
+      <Footer />
     </>
   );
 }
