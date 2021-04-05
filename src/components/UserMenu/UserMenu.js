@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getUserName } from '../../redux/authorization/authorization-selectors';
 import { logOut } from '../../redux/authorization/authorization-operations';
 
+
 export default function UserMenu() {
   const dispatch = useDispatch();
   const userName = useSelector(getUserName);
@@ -16,7 +17,7 @@ export default function UserMenu() {
       <NavLink exact to="/home" className={s.link}>
         Home
       </NavLink>
-      <NavLink exact to="/materials" className={s.link}>
+      <NavLink exact to="/useful-info" className={s.link}>
         Materials
       </NavLink>
       <Avatar>{nameInAvatar}</Avatar>

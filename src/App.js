@@ -7,6 +7,10 @@ import { getIsFetchingCurrentUser } from './redux/authorization/authorization-se
 import { fetchCurrentUser } from './redux/authorization/authorization-operations';
 import Navigation from './components/Navigation/Navigation';
 import './App.css';
+import UsefullInfo from './components/UsefullInfo/UsefullInfo';
+
+import { books, resources } from './usefullMaterials.json';
+
 
 function App() {
   const isFetchingCurrentUser = useSelector(getIsFetchingCurrentUser);
@@ -42,7 +46,7 @@ function App() {
               </PrivateRoute>
 
               <PrivateRoute path="/useful-info" redirectTo="/auth">
-                {/* <InformationPage /> */}
+                <UsefullInfo books={books} resources={resources}/>
               </PrivateRoute>
 
               <PublicRoute path="/contacts">
