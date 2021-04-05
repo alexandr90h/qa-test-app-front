@@ -6,6 +6,7 @@ import PrivateRoute from './components/Routes/PrivateRoute';
 import { getIsFetchingCurrentUser } from './redux/authorization/authorization-selectors';
 import { fetchCurrentUser } from './redux/authorization/authorization-operations';
 import Navigation from './components/Navigation/Navigation';
+// import logo from './logo.svg';
 import './App.css';
 import UsefullInfo from './components/UsefullInfo/UsefullInfo';
 
