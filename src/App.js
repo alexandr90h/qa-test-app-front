@@ -6,6 +6,7 @@ import PrivateRoute from './components/Routes/PrivateRoute';
 import { getIsFetchingCurrentUser } from './redux/authorization/authorization-selectors';
 import { fetchCurrentUser } from './redux/authorization/authorization-operations';
 import Navigation from './components/Navigation/Navigation';
+import ResultsPage from './components/Results/Results';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <>
+      <ResultsPage />
       {isFetchingCurrentUser ? (
         <p>Loader</p>
       ) : (
@@ -37,9 +39,9 @@ function App() {
                 {/* <TestPage /> */}
               </PrivateRoute>
 
-              <PrivateRoute path="/results" redirectTo="/auth">
-                {/* <ResultsPage /> */}
-              </PrivateRoute>
+              <PublicRoute path="/results" restricted>
+                {<ResultsPage />}
+              </PublicRoute>
 
               <PrivateRoute path="/useful-info" redirectTo="/auth">
                 {/* <InformationPage /> */}
