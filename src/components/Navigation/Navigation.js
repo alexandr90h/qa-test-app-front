@@ -16,6 +16,7 @@ export default function Navigation() {
         <UserMenu />
       ) : (
         <>
+          <UserMenu />
           <Logo />
           <NavLink exact to="/contacts" className={s.link}>
             Contacts
@@ -25,3 +26,5 @@ export default function Navigation() {
     </nav>
   );
 }
+
+//потом удалить  <UserMenu /> перед  <Logo />
