@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+.mainConteiner {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+}
+.title {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+}
+.textContent1 {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.lineHorizontal {
+  margin-left: auto;
+  margin-right: auto;
+  width: 130px;
+  height: 0px;
+  opacity: 0.15;
+  border: 1px solid #00122f;
+}
+.imgGraf {
+  margin-top: 12px;
+  width: 180px;
+}
+
+.resultTextContent {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.02em;
+  p {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    height: 20px;
+  }
+}
+.lineVertical {
+  position: absolute;
+  width: 30px;
+  top: 20px;
+  height: 0;
+  opacity: 0.15;
+  border: 1px solid #00122f;
+  transform: rotate(-90deg);
+}
+.catImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  height: 120px;
+}
+.grateText {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+}
+.sentenceText {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.btnTryAgain {
+  display: block;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 190px;
+  height: 48px;
+  background-color: #ff6b09;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+}
