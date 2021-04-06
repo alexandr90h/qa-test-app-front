@@ -6,6 +6,7 @@ import PrivateRoute from './components/Routes/PrivateRoute';
 import { getIsFetchingCurrentUser } from './redux/authorization/authorization-selectors';
 import { fetchCurrentUser } from './redux/authorization/authorization-operations';
 import Navigation from './components/Navigation/Navigation';
+import AuthPage from './Views/AuthPage';
 import './App.css';
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
               </PrivateRoute>
 
               <PublicRoute path="/auth" restricted redirectTo="/">
-                {/* <AuthorizationPage /> */}
+                <AuthPage />
               </PublicRoute>
 
               <PrivateRoute path="/test" redirectTo="/auth">

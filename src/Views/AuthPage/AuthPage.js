@@ -1,14 +1,34 @@
 import { useDispatch } from 'react-redux';
-import authOperations from '../../redux/authorization/authorization-operations';
+import {
+  logIn,
+  register,
+} from '../../redux/authorization/authorization-operations';
 
 import styles from './AuthPage.module.css';
 import googleLogo from './images/Google-logo.svg';
-import AuthForm from '../';
+import AuthForm from '../../components/AuthForm';
+
 const AuthPage = () => {
   const dispatch = useDispatch();
-  const handleSubmit = async ({ email, password }) => {
-    await dispatch(authOperations.logIn({ email, password }));
+
+  // submit function
+  const handleSubmint = async (credentials, tegetName) => {
+    switch (tegetName) {
+      case 'signIn':
+        console.log(tegetName, credentials.email, credentials.password);
+        await dispatch(logIn(credentials));
+
+        break;
+      case 'signUp':
+        console.log(tegetName, credentials.email, credentials.password);
+        await dispatch(register(credentials));
+
+        break;
+      default:
+        break;
+    }
   };
+
   return (
     <div className={styles.AuthPage}>
       <div className={styles.description}>
@@ -26,7 +46,7 @@ const AuthPage = () => {
           Google
         </button>
         <p>Or login to our app using e-mail and password:</p>
-        <AuthForm login="true" onSubmit={handleSubmit} />
+        <AuthForm onSubmit={handleSubmint} />
       </div>
     </div>
   );
