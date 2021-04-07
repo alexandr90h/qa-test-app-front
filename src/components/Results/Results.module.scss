@@ -52,7 +52,9 @@
 }
 .imgGraf {
   margin-top: 12px;
-  width: 180px;
+  margin-right: auto;
+  margin-left: auto;
+  // width: 180px;
   @media screen and(min-width: 768px) {
     margin-top: 40px;
     width: 300px;
