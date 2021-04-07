@@ -1,7 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import s from './Navigation.module.css';
+
+import s from '../Navigation/Navigation.module.css';
 import UserMenu from '../UserMenu/UserMenu';
 import Logo from '../Logo/Logo';
 
@@ -11,20 +12,28 @@ export default function Navigation() {
   const isLoggedIn = useSelector(getIsLoggedIn);
 
   return (
-    <nav>
-      {isLoggedIn ? (
-        <UserMenu />
-      ) : (
-        <>
+    <section className={s.section}>
+      <Logo />
+      <nav className={s.navigation}>
+        {isLoggedIn ? (
           <UserMenu />
-          <Logo />
-          <NavLink exact to="/contacts" className={s.link}>
-            Contacts
-          </NavLink>
-        </>
-      )}
-    </nav>
+        ) : (
+          <>
+            <NavLink
+              exact
+              to="/contacts"
+              className={s.link}
+              activeClassName={s.activeLink}
+            >
+              Contacts
+            </NavLink>
+          </>
+        )}
+      </nav>
+    </section>
   );
 }
 
-//потом удалить  <UserMenu /> перед  <Logo />
+{
+  /* ; */
+}
