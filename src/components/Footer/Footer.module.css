@@ -1,0 +1,72 @@
+<!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text"><span class="copyright"> © </span>2021 | All Rights Reserved | Developed with
+                <svg class="footer-icon" width="17" height="17">
+                    <use href="./img/sprite.svg#heart"></use>
+                </svg> by <a href="./contacts.html" class="footer-contacts">GoIT Students</a>
+            </p>
+        </div>
+    </footer>
+
+    /* Footer */
+.footer{
+  background-color: var(--blueBGColor);
+  text-align: center;  
+  width: 100%;
+  }
+ 
+.footer-text{
+color: var(--footerTextColor);
+font: weight 400px;
+letter-spacing: 0.04em;
+}
+
+.copyright{
+font-weight: 500;
+font-size: 20px;
+vertical-align: middle;
+}
+
+.footer-icon{
+  display: inline-block;
+  fill: var(--OrangeColor);
+  vertical-align: text-bottom;
+  margin: 5px 2px 0px 2px;
+}
+
+.footer-contacts{
+  color: var(--footerTextColor);
+  text-decoration: underline;
+}
+
+ 
+@media screen and (max-width: 767px) {
+.footer{
+max-width: 767px;
+padding: 10px 18px;
+width: 100%;  
+}
+
+.footer-text{
+font-size: 10px;
+line-height: 1.2;
+}
+}
+
+@media screen and (min-width: 768px) {
+.footer{
+min-width: 768px;
+padding: 19px 20px;
+}
+
+.footer-text{
+font-size: 12px;
+line-height: 1.25;
+} 
+}
+
+@media screen and (min-width: 1280px) {
+  .footer{ min-width: 1280px;
+  }  
+}
