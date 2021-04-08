@@ -19,7 +19,6 @@ function App() {
 
   return (
     <>
-      <ResultsPage />
       {isFetchingCurrentUser ? (
         <p>Loader</p>
       ) : (
@@ -39,7 +38,7 @@ function App() {
                 {/* <TestPage /> */}
               </PrivateRoute>
 
-              <PublicRoute path="/results" restricted>
+              <PublicRoute path="/results" redirectTo="/auth">
                 {<ResultsPage />}
               </PublicRoute>
 
