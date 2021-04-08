@@ -1,4 +1,4 @@
-<!-- Footer -->
+/* <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <p class="footer-text"><span class="copyright"> © </span>2021 | All Rights Reserved | Developed with
@@ -7,19 +7,24 @@
                 </svg> by <a href="./contacts.html" class="footer-contacts">GoIT Students</a>
             </p>
         </div>
-    </footer>
+    </footer> */
 
     /* Footer */
-.footer{
+.footer{display: flex;
+justify-content: center;
   background-color: var(--blueBGColor);
-  text-align: center;  
+  text-align: center;
   width: 100%;
   }
- 
-.footer-text{
-color: var(--footerTextColor);
-font: weight 400px;
-letter-spacing: 0.04em;
+
+.footerText{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap:  wrap;
+  color: var(--footerTextColor);
+  font: weight 400px;
+  letter-spacing: 0.04em;
 }
 
 .copyright{
@@ -28,27 +33,27 @@ font-size: 20px;
 vertical-align: middle;
 }
 
-.footer-icon{
+.footerIcon{
   display: inline-block;
   fill: var(--OrangeColor);
   vertical-align: text-bottom;
   margin: 5px 2px 0px 2px;
 }
 
-.footer-contacts{
+.footerContacts{
   color: var(--footerTextColor);
   text-decoration: underline;
 }
 
- 
+
 @media screen and (max-width: 767px) {
 .footer{
 max-width: 767px;
 padding: 10px 18px;
-width: 100%;  
+width: 100%;
 }
 
-.footer-text{
+.footerText{
 font-size: 10px;
 line-height: 1.2;
 }
@@ -60,13 +65,13 @@ min-width: 768px;
 padding: 19px 20px;
 }
 
-.footer-text{
+.footerText{
 font-size: 12px;
 line-height: 1.25;
-} 
+}
 }
 
 @media screen and (min-width: 1280px) {
   .footer{ min-width: 1280px;
-  }  
+  }
 }
