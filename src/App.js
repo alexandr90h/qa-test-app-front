@@ -7,8 +7,9 @@ import { getIsFetchingCurrentUser } from './redux/authorization/authorization-se
 import { fetchCurrentUser } from './redux/authorization/authorization-operations';
 import Navigation from './components/Navigation/Navigation';
 import ResultsPage from './components/Results/Results';
-import './App.css';
+import Footer from './components/Footer';
 
+import './App.css';
 function App() {
   const isFetchingCurrentUser = useSelector(getIsFetchingCurrentUser);
   const dispatch = useDispatch();
@@ -59,6 +60,7 @@ function App() {
           </Switch>
         </>
       )}
+      <Footer />
     </>
   );
 }
